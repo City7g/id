@@ -1,16 +1,33 @@
 header.header
-  a(href="#").header-logo
-    img(src="/img/logo.svg", alt="").header-logo__img
-
   .container
     .container__inside
-    
       .header-nav
-        a(href="/blog.html").link-main Portfolio
+        a(href="/portfolio.html").link-main Portfolio
         a(href="/about.html").link-main About us
         a(href="/brief.html").link-main Fill out brief
 
-  .hamburger
-    span
-    span
-    span
+a(href="/").header-logo
+  img(src="/img/logo.svg", alt="").header-logo__img
+
+button.hamburger
+  span
+  span
+  span
+
+.menu
+  .menu__list
+    a(href="#").title-h3 Our projects
+    a(href="/blog.html").title-h3 Blog
+    a(href="#").title-h3 Contact
+    a(href="#").title-h3 Jobs
+    a(href="#").title-h3 For partners
+  .menu__columns
+    a(href="#").link-main Behance
+    a(href="#").link-main Medium
+    a(href="#").link-main Dribbble
+    a(href="#").link-main Twitter
+    a(href="#").link-main Istagram
+    a(href="#").link-main LinkedIn
+    a(href="#").link-main Facebook
+  
+  a(href="#").link-main.text-gray.menu__sitemap Sitemap

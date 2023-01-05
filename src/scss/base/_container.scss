@@ -10,6 +10,7 @@
   transition: 0.3s margin-left ease;
 }
 
-body.active .container__inside {
+body.--menu .container__inside,
+body.--post .container__inside {
   margin-left: 0;
 }

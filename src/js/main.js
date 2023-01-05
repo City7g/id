@@ -1,16 +1,10 @@
-// Body Position
-document.querySelector('.header-logo').addEventListener('click', e => {
-  e.preventDefault()
-  document.body.classList.toggle('active')
-})
-
-
 // Hamburger
 const hambuger = document.querySelector('.hamburger')
 
 hambuger.addEventListener('click', e => {
   e.preventDefault()
-  hambuger.classList.toggle('active')
+  console.log(e)
+  document.body.classList.toggle('--menu')
 })
 
 // Form
@@ -33,7 +27,13 @@ blogLink.forEach(item => {
   item.addEventListener('click', e => {
     e.preventDefault()
 
-    document.body.classList.toggle('active')
-    single.classList.toggle('active')
+    document.body.classList.toggle('--post')
   })
 })
+
+// Close modal
+// window.addEventListener('click', e => {
+//   if(e.target.closest(document.querySelector)) {
+
+//   }
+// })

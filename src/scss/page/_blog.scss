@@ -1,5 +1,6 @@
 .section-blog {
-  & .card {
+  & .card,
+  & .case {
     margin-top: 80px;
   }
 
@@ -23,13 +24,44 @@
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 1001;
   height: 100vh;
   transform: translateX(100%);
   transition: 0.3s transform ease;
+  transition-delay: 0s;
   border-left: 1px solid #656A77;
   background-color: $white;
+  overscroll-behavior: none;
+  overflow: auto;
 
-  &.active {
+  body.--post & {
     transform: translateX(0);
+    transition-delay: 0.05s;
+  }
+
+  &__wrap {
+    width: 755px;
+    padding: 40px 68px;
+  }
+
+  &__img {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__text ~ &__subtitle {
+    margin-top: 80px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
   }
 }
