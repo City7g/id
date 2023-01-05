@@ -1,0 +1,29 @@
+extends ../layout/main
+
+block content
+  section.section-blog
+    .container
+      .container__inside
+        h1.title-h1.section__title Our blog.
+        p.text-main From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.
+
+        form.form-search.section-blog__form
+          input(type="text", placeholder="Search Articles...", name="search")
+          button
+            img(src="/img/icon/search.svg", alt="")
+
+        .blog
+          each card in [1, 2, 3, 4]
+            .card
+              img(src=`/img/blog/item-${card}.jpg`, alt="").card__img
+              h4.title-h3.card__title Blog title number one how we use small grid in our site
+              p.text-main.card__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction by generating serious brand.
+              a(href="#").link-main.card__link Read more
+        
+        a(href="#").btn-main.section__more Load more
+  
+  .single
+    .single__wrap
+      img(src="/img/blog/item-1.jpg", alt="").single__img
+
+      h3.title-h3.single__title Blog title number one how we use small grid in our site

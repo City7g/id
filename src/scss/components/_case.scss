@@ -1,0 +1,23 @@
+.cases {
+  display: flex;
+  gap: 50px;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+
+  & > * {
+    flex-shrink: 0;
+    flex-basis: 683px;
+    scroll-snap-align: start;
+  }
+}
+
+.case {
+  &__img {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+}

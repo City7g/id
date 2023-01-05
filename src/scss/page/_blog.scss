@@ -1,0 +1,35 @@
+.section-blog {
+  & .card {
+    margin-top: 80px;
+  }
+
+  &__form {
+    margin-top: 30px;
+  }
+}
+
+.form-search {
+  position: relative;
+
+  & button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+}
+
+.single {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: 0.3s transform ease;
+  border-left: 1px solid #656A77;
+  background-color: $white;
+
+  &.active {
+    transform: translateX(0);
+  }
+}

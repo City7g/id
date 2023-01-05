@@ -1,0 +1,15 @@
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container__inside {
+  width: 683px;
+  margin-left: calc(100% - 683px);
+  transition: 0.3s margin-left ease;
+}
+
+body.active .container__inside {
+  margin-left: 0;
+}

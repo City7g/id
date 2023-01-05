@@ -1,0 +1,23 @@
+.link-main {
+  font-size: 18px;
+  line-height: if($pixel, 29px, 1.6);
+  font-weight: 700;
+  text-decoration-line: underline;
+  transition: 0.3s color ease;
+
+  &:hover {
+    color: #656A77;
+  }
+}
+
+.link-big {
+  font-size: 26px;
+  line-height: if($pixel, 42px, 1.6);
+  font-weight: 700;
+  text-decoration-line: underline;
+  transition: 0.3s color ease;
+
+  &:hover {
+    color: #656A77;
+  }
+}

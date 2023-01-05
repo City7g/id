@@ -1,0 +1,11 @@
+input[type=text] {
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  line-height: if($pixel, 29px, 1.6);
+  border-bottom: 1px solid #656A77;
+
+  &:focus {
+    outline: none;
+  }
+}

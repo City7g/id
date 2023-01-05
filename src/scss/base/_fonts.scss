@@ -1,0 +1,39 @@
+// Inlcude fonts
+@include font-face('Gilroy', 'Gilroy-Regular', 400);
+@include font-face('Gilroy', 'Gilroy-Bold', 700);
+@include font-face('Gilroy', 'Gilroy-ExtraBold', 800);
+
+// Main Fonts
+.title-h1 {
+  font-size: 60px;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: 0.017em;
+}
+
+.title-h2 {
+  font-size: 45px;
+  line-height: 1.145;
+  font-weight: 700;
+  letter-spacing: 0.012em;
+}
+
+.title-h3 {
+  font-size: 34px;
+  line-height: 1.145;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.title-h4 {
+  font-size: 20px;
+  line-height: if($pixel, 32px, 1.6);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.text-main {
+  color: #656A77;
+  font-size: 18px;
+  line-height: if($pixel, 29px, 1.6);
+}

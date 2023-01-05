@@ -1,0 +1,81 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background-color: $white;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 140px;
+  }
+}
+
+.header-logo {
+  position: absolute;
+  top: 13px;
+  left: 140px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  height: 90px;
+}
+
+.hamburger {
+  position: absolute;
+  top: 20px;
+  right: 134px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+
+  & span {
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 38px;
+    height: 4px;
+    background-color: $black;
+    transform: translate(-50%, -50%);
+
+    &:nth-child(1) {
+      top: calc(50% - 12px);
+      transition: 0.3s ease;
+      transition-property: top, transform;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      transition: 0.3s opacity ease;
+    }
+
+    &:nth-child(3) {
+      top: calc(50% + 12px);
+      transition: 0.3s ease;
+      transition-property: top, transform;
+    }
+  }
+
+  &.active span {
+    &:nth-child(1) {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+}

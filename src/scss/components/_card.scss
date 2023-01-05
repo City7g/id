@@ -1,0 +1,11 @@
+.card {
+  &__img {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__title,
+  &__text {
+    margin-bottom: 20px;
+  }
+}
