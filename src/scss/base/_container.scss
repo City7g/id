@@ -9,6 +9,7 @@
 
   @media (min-width: 768px) {
     width: calc(var(--container-column-width) * 10);
+    margin-left: calc(var(--container-column-width) * 3);
   }
   
   @media (min-width: 1200px) {

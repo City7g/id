@@ -4,18 +4,6 @@ body {
   --screen-width: 100vw;
 }
 
-.grid::after {
-  width: var(--container-column-width);
-  height: var(--container-column-width);
-  background-color: red;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10000;
-  display: block;
-  content: '';
-}
-
 .grid::before {
   position: fixed;
   top: 0;
@@ -28,7 +16,7 @@ body {
   pointer-events: none;
 
   border: solid rgba(#007EFF, 0.2);
-  border-width: 0 calc((var(--screen-width) - var(--container-width)) / 2);
+  border-width: 0 20px;
 
   background-image: repeating-linear-gradient(
     to right,
@@ -39,4 +27,8 @@ body {
   );
 
   background-repeat: no-repeat;
+
+  @media (min-width: 760px) {
+    border-width: 0 calc((var(--screen-width) - var(--container-width)) / 2);
+  }
 }

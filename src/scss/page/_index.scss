@@ -1,6 +1,10 @@
 section {
-  margin: 260px 0;
+  margin: 180px 0;
   overflow: hidden;
+
+  @media (min-width: 760px) {
+    margin: 260px 0;
+  }
 }
 
 .section {
