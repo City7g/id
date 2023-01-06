@@ -22,3 +22,23 @@ a {
   background-color: $black;
   color: $white;
 }
+
+:root {
+  --container-width: 1600px;
+  --container-columns: 24;
+  --container-column-width: calc(var(--container-width) / var(--container-columns));
+
+  @media (max-width: 1899px) {
+    --container-width: 1200px;
+  }
+
+  @media (max-width: 1199px) {
+    --container-width: 700px;
+    --container-columns: 14;
+  }
+
+  @media (max-width: 767px) {
+    --container-width: 100%;
+    --container-columns: 12;
+  }
+}

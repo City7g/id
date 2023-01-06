@@ -12,11 +12,7 @@
   position: fixed;
   z-index: 1002;
   top: 13px;
-  left: 140px;
-
-  @media (max-width: 1899px) {
-    left: 100px;
-  }
+  left: calc((100vw - var(--container-width)) / 2);
 }
 
 .header-nav {
@@ -30,14 +26,10 @@
   position: fixed;
   z-index: 1002;
   top: 20px;
-  right: 134px;
+  right: calc((100vw - var(--container-width)) / 2 - 6px);
   width: 50px;
   height: 50px;
   cursor: pointer;
-
-  @media (max-width: 1899px) {
-    right: 94px;
-  }
 
   & span {
     position: absolute;
@@ -89,7 +81,7 @@
   padding: 120px 67px;
   top: 0;
   right: 0;
-  width: calc((100vw - 1640px) / 2 + 68.3px * 10);
+  width: 100%;
   bottom: 0;
   z-index: 1000;
   background-color: $white;
@@ -97,12 +89,17 @@
   transition: 0.3s transform ease;
   transform: translateX(100%);
 
+  @media (min-width: 1200px) {
+    border-left: 1px solid #656A77;
+    width: calc((100vw - var(--container-width)) / 2 + 68.3px * 10);
+  }
+
   body.--menu {
     overflow: hidden;
   }
 
   body.--menu & {
-    transform: translateX(10px);
+    transform: translateX(0px);
   }
 
   &__list {

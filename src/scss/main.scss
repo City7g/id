@@ -5,10 +5,10 @@
 @import './helper/colors';
 @import './helper/breakpoint';
 @import './helper/mixins';
-@import './helper/grid';
 
 @import './base/reset';
 @import './base/main';
+@import './helper/grid';
 @import './base/fonts';
 @import './base/container';
 @import './base/input';

@@ -12,6 +12,10 @@
     @media (max-width: 1599px) {
       flex-basis: 550px;
     }
+
+    @media (max-width: 767px) {
+      flex-basis: 500px;
+    }
   }
 }
 
