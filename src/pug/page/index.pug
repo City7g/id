@@ -1,21 +1,22 @@
 extends ../layout/main
 
 block content
-  section.section-first
+  section.section
     .container
       .container__inside
         h1.title-h1.section__title We show users the usefulness of your business.
         p.text-main From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.
     
-  section.section-second
+  section.section
     .container
       .container__inside
         h2.title-h2 We are team that will help you grow your business.
-        each post in [1, 2, 3]
-          article.article
-            img(src=`/img/post/item-${post}.jpg`, alt="").article__img
-            h3.title-h3.article__title We flip your user’s perceptions
-            p.text-main.article__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies. Pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.s
+        .section__posts
+          each post in [1, 2, 3]
+            .card
+              img(src=`/img/post/item-${post}.jpg`, alt="").card__img
+              h3.title-h3.card__title We flip your user’s perceptions
+              p.text-main.card__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies. Pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.s
         a(href="#").link-main.section__more More about us
   
   section.section-third

@@ -41,4 +41,8 @@ a {
     --container-width: 100%;
     --container-columns: 12;
   }
+
+  @media (max-width: 567px) {
+    --container-columns: 4;
+  }
 }

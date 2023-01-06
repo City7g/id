@@ -4,7 +4,6 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  height: 90px;
   background-color: $white;
 }
 
@@ -23,7 +22,11 @@
   display: flex;
   align-items: center;
   gap: 80px;
-  height: 90px;
+  height: 60px;
+
+  @media (min-width: 760px) {
+    height: 90px;
+  }
 
   @media (max-width: 1199px) {
     gap: 50px;
@@ -56,10 +59,15 @@
     position: absolute;
     left: 50%;
     display: block;
-    width: 38px;
-    height: 4px;
+    width: 33px;
+    height: 3px;
     background-color: $black;
     transform: translate(-50%, -50%);
+
+    @media (min-width: 760px) {
+      width: 38px;
+      height: 4px;
+    }
 
     &:nth-child(1) {
       top: calc(50% - 12px);
@@ -106,12 +114,12 @@
   bottom: 0;
   z-index: 1000;
   background-color: $white;
-  border-left: 1px solid #656A77;
+  border-left: 1px solid #656a77;
   transition: 0.3s transform ease;
   transform: translateX(100%);
 
   @media (min-width: 1200px) {
-    border-left: 1px solid #656A77;
+    border-left: 1px solid #656a77;
     width: calc((100vw - var(--container-width)) / 2 + 68.3px * 10);
   }
 

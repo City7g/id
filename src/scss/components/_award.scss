@@ -1,15 +1,25 @@
 .award {
   position: relative;
-  margin-top: 30px;
-  padding-left: 95px;
+  margin-top: 20px;
+  padding-left: 74px;
+
+  @media (min-width: 760px) {
+    padding-left: 95px;
+    margin-top: 30px;
+  }
 
   &__letter {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 64px;
+    font-size: 50px;
     line-height: 1.1;
     font-weight: 800;
+
+    @media (min-width: 760px) {
+      font-size: 64px;
+      line-height: 1.1;
+    }
   }
 
   &__title {

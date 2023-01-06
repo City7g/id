@@ -5,24 +5,39 @@
 
 // Main Fonts
 .title-h1 {
-  font-size: 60px;
-  line-height: if($pixel, 65px, 1.08);
+  font-size: 40px;
+  line-height: if($pixel, 43px, 1.08);
   font-weight: 800;
   letter-spacing: 0.017em;
+
+  @media (min-width: 760px) {
+    font-size: 60px;
+    line-height: if($pixel, 65px, 1.08);
+  }
 }
 
 .title-h2 {
-  font-size: 45px;
-  line-height: if($pixel, 52px, 1.145);
+  font-size: 30px;
+  line-height: if($pixel, 34px, 1.145);
   font-weight: 700;
   letter-spacing: 0.012em;
+
+  @media (min-width: 760px) {
+    font-size: 45px;
+    line-height: if($pixel, 52px, 1.145);
+  }
 }
 
 .title-h3 {
-  font-size: 34px;
-  line-height: if($pixel, 39px, 1.145);
+  font-size: 24px;
+  line-height: if($pixel, 27px, 1.145);
   font-weight: 700;
   letter-spacing: 0.02em;
+
+  @media (min-width: 760px) {
+    font-size: 34px;
+    line-height: if($pixel, 39px, 1.145);
+  }
 }
 
 .title-h4 {
@@ -33,11 +48,16 @@
 }
 
 .text-main {
-  color: #656A77;
-  font-size: 18px;
-  line-height: if($pixel, 29px, 1.6);
+  color: #656a77;
+  font-size: 16px;
+  line-height: if($pixel, 26px, 1.6);
+
+  @media (min-width: 760px) {
+    font-size: 18px;
+    line-height: if($pixel, 29px, 1.6);
+  }
 }
 
 .text-gray {
-  color: #656A77;
+  color: #656a77;
 }

@@ -40,12 +40,6 @@ const development = () => {
     });
   }
   addGrid()
-
-  // Fixed Grid
-  // document.body.style.setProperty("--screen-width", document.body.scrollWidth + "px");
-  // window.addEventListener('resize', () => {
-  //   document.body.style.setProperty("--screen-width", document.body.scrollWidth + "px");
-  // })
 };
 
 export default development;
