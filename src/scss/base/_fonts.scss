@@ -6,21 +6,21 @@
 // Main Fonts
 .title-h1 {
   font-size: 60px;
-  line-height: 1.08;
+  line-height: if($pixel, 65px, 1.08);
   font-weight: 800;
   letter-spacing: 0.017em;
 }
 
 .title-h2 {
   font-size: 45px;
-  line-height: 1.145;
+  line-height: if($pixel, 52px, 1.145);
   font-weight: 700;
   letter-spacing: 0.012em;
 }
 
 .title-h3 {
   font-size: 34px;
-  line-height: 1.145;
+  line-height: if($pixel, 39px, 1.145);
   font-weight: 700;
   letter-spacing: 0.02em;
 }

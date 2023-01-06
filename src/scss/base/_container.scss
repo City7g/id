@@ -2,12 +2,21 @@
   max-width: 1260px;
   margin: 0 auto;
   padding: 0 15px;
+
+  @media (max-width: 1899px) {
+    max-width: 1030px;
+  }
 }
 
 .container__inside {
   width: 683px;
   margin-left: calc(100% - 683px);
   transition: 0.3s margin-left ease;
+
+  @media (max-width: 1899px) {
+    width: 550px;
+    margin-left: calc(100% - 600px);
+  }
 }
 
 body.--menu .container__inside,

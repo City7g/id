@@ -1,3 +1,7 @@
+import development from "./module/development.js"
+
+development()
+
 // Hamburger
 const hambuger = document.querySelector('.hamburger')
 
@@ -30,10 +34,3 @@ blogLink.forEach(item => {
     document.body.classList.toggle('--post')
   })
 })
-
-// Close modal
-// window.addEventListener('click', e => {
-//   if(e.target.closest(document.querySelector)) {
-
-//   }
-// })

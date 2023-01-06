@@ -42,6 +42,11 @@
   &__wrap {
     width: 755px;
     padding: 40px 68px;
+
+    @media (max-width: 1899px) {
+      width: 600px;
+      padding: 40px 100px 40px 50px;
+    }
   }
 
   &__img {

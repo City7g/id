@@ -8,6 +8,10 @@
     flex-shrink: 0;
     flex-basis: 683px;
     scroll-snap-align: start;
+
+    @media (max-width: 1599px) {
+      flex-basis: 550px;
+    }
   }
 }
 

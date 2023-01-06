@@ -23,6 +23,10 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 30px 80px;
+
+    @media (max-width: 1599px) {
+      gap: 30px 79px;
+    }
   }
 }
 
@@ -46,7 +50,11 @@ section {
     & > * {
       flex-shrink: 0;
       flex-basis: 683px;
-      scroll-snap-align: 20px;
+      scroll-snap-align: start;
+
+      @media (max-width: 1899px) {
+        flex-basis: 550px;
+      }
     }
   }
 }
