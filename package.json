@@ -11,7 +11,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "gsap": "^3.9.1"
+    "gsap": "^3.9.1",
+    "swiper": "^8.4.5"
   },
   "devDependencies": {
     "browser-sync": "^2.27.11",

@@ -58,3 +58,9 @@ section {
     }
   }
 }
+
+.section-job {
+  & .card ~ .card {
+    margin-top: 80px;
+  }
+}

@@ -1,25 +1,30 @@
 .container {
-  max-width: 1260px;
+  max-width: 1670px;
   margin: 0 auto;
   padding: 0 15px;
+  outline: 1px solid red;
 
   @media (max-width: 1899px) {
-    max-width: 1030px;
+    max-width: 1230px;
   }
 }
 
 .container__inside {
   width: 683px;
-  margin-left: calc(100% - 683px);
+  margin-left: calc(100% - 683px - 68px * 3);
   transition: 0.3s margin-left ease;
 
   @media (max-width: 1899px) {
     width: 550px;
-    margin-left: calc(100% - 600px);
+    margin-left: calc(100% - 550px - 50px * 3);
   }
 }
 
 body.--menu .container__inside,
 body.--post .container__inside {
-  margin-left: 0;
+  margin-left: calc(68px * 3);
+
+  @media (max-width: 1600px) {
+    margin-left: calc(50px * 2);
+  }
 }

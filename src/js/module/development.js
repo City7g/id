@@ -28,10 +28,10 @@ const development = () => {
   const addGrid = () => {
     const gridItemNav = document.createElement("a");
     gridItemNav.setAttribute("href", "#grid");
-    gridItemNav.classList.add("header-nav__link");
+    gridItemNav.classList.add("link-main");
     gridItemNav.textContent = "Grid";
     document
-      .querySelector(".header .header-nav__link:last-child")
+      .querySelector(".header-nav a:last-child")
       .after(gridItemNav);
 
     gridItemNav.addEventListener("click", (e) => {
@@ -39,7 +39,7 @@ const development = () => {
       document.querySelector("body").classList.toggle("grid");
     });
   }
-  // addGrid()
+  addGrid()
 
   // Fixed Grid
   // document.body.style.setProperty("--screen-width", document.body.scrollWidth + "px");
