@@ -1,0 +1,21 @@
+extends ../layout/main
+
+block content
+  section.section.section-form
+    .container
+      .container__inside
+        h1.title-h1.section__title Let’s talk.
+        p.text-main.section__text If you have suggestions, an idea, a project or just want to talk. Fill out the form and we will contact you shortly.
+
+        h3.title-h3.section-form__subtitle Contact Information.
+        form
+          input(type="text", name="name", placeholder="Name")
+          input(type="text", name="company", placeholder="Company")
+          input(type="email", name="email", placeholder="Email")
+          input(type="tel", name="phone", placeholder="Phone number")
+          input(type="text", name="login", placeholder="Login or phone in messenger")
+          input(type="text", name="name", placeholder="Name")
+          textarea(name="message", placeholder="Your message")
+          button(type="submit").link-main Get in touch
+        
+        p.text-main.section-form__text By clicking on the "Get in touch" button, you consent to the processing of your personal data

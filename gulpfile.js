@@ -31,6 +31,18 @@ const html = () => {
     .pipe(browsersync.stream())
 }
 
+const page = () => {
+  return gulp
+    .src('./src/pug/page/*.pug', { since: gulp.lastRun(page) })
+    .pipe(
+      pug({
+        pretty: true
+      })
+    )
+    .pipe(gulp.dest('./dist'))
+    .pipe(browsersync.stream())
+}
+
 const style = () => {
   return gulp
     .src('./src/scss/main.scss')
@@ -71,7 +83,8 @@ export default () => {
   image()
   font()
   browserSync()
-  gulp.watch('./src/pug/**/*.pug', html)
+  gulp.watch(['./src/pug/layout/*.pug', './src/pug/components/*.pug'], html)
+  gulp.watch(['./src/pug/page/*.pug'], page)
   gulp.watch('./src/scss/**/*.scss', style)
   gulp.watch('./src/js/**/*.js', script)
   gulp.watch('./src/img/**/*', image)

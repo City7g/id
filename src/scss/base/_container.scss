@@ -28,7 +28,7 @@ body.--post .container__inside {
   margin-left: 0;
 
   @media (min-width: 768px) {
-    
+    margin-left: calc(var(--container-column-width) * 3);
   }
   
   @media (min-width: 1200px) {

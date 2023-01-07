@@ -1,6 +1,25 @@
+import Swiper from 'swiper'
 import development from "./module/development.js"
 
 development()
+
+// Sliders
+const swiper = new Swiper('.swiper', {
+  spaceBetween: 50,
+  initialSlide: 2,
+  loop: true,
+  breakpoints: {
+    760: {
+      width: 500
+    },
+    1200: {
+      width: 550
+    },
+    1900: {
+      width: 683
+    }
+  }
+});
 
 // Hamburger
 const hambuger = document.querySelector('.hamburger')
@@ -11,27 +30,13 @@ hambuger.addEventListener('click', e => {
   if(body.classList.contains('--menu') || body.classList.contains('--post')) {
     body.classList.remove('--menu')
     body.classList.remove('--post')
-    console.log(1)
   } else {
     body.classList.add('--menu')
-    console.log(2)
   }
 })
 
-// Form
-const forms = document.querySelectorAll('form')
-forms.forEach(item => {
-  item.addEventListener('submit', e => {
-    e.preventDefault()
-
-    const formData = new FormData(item)
-
-    console.log(formData)
-  })
-})
-
 // Open single
-const blogLink = document.querySelectorAll(':is(.section-blog, .section-job) .card .card__link')
+const blogLink = document.querySelectorAll('.card__link')
 
 blogLink.forEach(item => {
   item.addEventListener('click', e => {
@@ -41,3 +46,4 @@ blogLink.forEach(item => {
     document.body.classList.toggle('--post')
   })
 })
+

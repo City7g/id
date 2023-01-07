@@ -6,6 +6,16 @@ const development = () => {
     }),
   ]);
 
+  // Prevent All Forms
+  const forms = document.querySelectorAll('form')
+  forms.forEach(item => {
+    item.addEventListener('submit', e => {
+      e.preventDefault()
+      const formData = new FormData(item)
+      console.log(formData)
+    })
+  })
+
   // Device Width
   const deviceWidth = document.createElement("div");
   deviceWidth.style.position = "fixed";

@@ -2,19 +2,20 @@ extends ../layout/main
 
 block content
   - const jobs = ['Middle Frontend Developer', 'Senior Backend Developer']
-  section.section-job
+  
+  section.section
     .container
       .container__inside
         h1.title-h1.section__title Jobs for the best job with us.
         p.text-main.section__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.
 
-        .section-job__jobs
+        .section__posts
           each job, index in jobs
             .card
-              img(src=`/img/job/item-${index + 1}.jpg`, alt="").card__img
+              img(src=`/img/job/item-${index + 1}.jpg`, alt="").card__img.card__img--small
               h4.title-h3.card__title= job
               p.text-main.card__text From pre-seed to series, we accelerate the companies we believe in by generating.
-              a(href="#").link-main.card__link More about Job 
+              a(href="#").link-main.card__more More about Job 
         
         a(href="#").btn-main.section__more Load more
 
@@ -25,7 +26,7 @@ block content
       h4.title-h4.single__subtitle Duties:
       p.text-main.single__text Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
       h4.title-h4.single__subtitle Duties:
-      p.text-main.single__text Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+      p.text-main.single__text Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
       h4.title-h4.single__subtitle Wage
       p.text-main.single__text Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
       h4.title-h4.single__subtitle Work format

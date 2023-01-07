@@ -1,24 +1,38 @@
 extends ../layout/main
 
 block content
-  section.section-first
+  section.section
     .container
       .container__inside
         h1.title-h1.section__title About company.
-        p.text-main From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.
+        p.text-main.section__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.
     
-  section.section-second
+      .about-video
+        img(src="/img/about-video.jpg", alt="").about-video__img
+
+  section.section
     .container
       .container__inside
         h2.title-h2 We are team that will help you grow your business.
-        each post in [1, 2, 3]
-          article.article
-            img(src=`/img/post/item-${post}.jpg`, alt="").article__img
-            h3.title-h3.article__title We flip your user’s perceptions
-            p.text-main.article__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies. Pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.s
+        .section__posts
+          each post in [1, 2, 3]
+            article.article
+              img(src=`/img/post/item-${post}.jpg`, alt="").card__img
+              h3.title-h3.card__title We flip your user’s perceptions
+              p.text-main.card__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies. Pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.s
         a(href="#").link-main.section__more More about us
+
+  section.section
+    .container
+      .container__inside
+        h3.title-h2.section__title We were working with.
+        p.text-main.section__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.
+
+        .section-work__works
+          - for (var x = 1; x < 10; x++)
+            img(src=`/img/work/item-${x}.svg`, alt="")
   
-  section.section-third
+  section.section
     .container
       .container__inside
         h3.title-h2.section__title World recognition.
@@ -29,28 +43,19 @@ block content
             h3.title-h3.award__title Awwwards Year
             p.text-main.award__text Award for the best site of the month
 
-  section.section-work
-    .container
-      .container__inside
-        h3.title-h2.section__title We were working with.
-        p.text-main.section__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.
-
-        .section-work__works
-          - for (var x = 1; x < 10; x++)
-            img(src=`/img/work/item-${x}.svg`, alt="")
-
-  section.section-internal
+  section.section
     .container
       .container__inside
         h3.title-h3.section__title Our internal projects.
         p.text-main.section__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction.
-        .case
-          img(src="/img/case/item-5.jpg", alt="").case__img
-          h4.title-h3.case__title Project title number one
-          p.text-main.case__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.
-        .case
-          img(src="/img/case/item-6.jpg", alt="").case__img
-          h4.title-h3.case__title Project title number one
-          p.text-main.case__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.
+        .section__posts
+          .card
+            img(src="/img/card/item-5.jpg", alt="").card__img.card__img--large
+            h4.title-h3.card__title Project title number one
+            p.text-main.card__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.
+          .card
+            img(src="/img/card/item-6.jpg", alt="").card__img.card__img--large
+            h4.title-h3.card__title Project title number one
+            p.text-main.card__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.
         
         a(href="#").link-main.section__more More our projects

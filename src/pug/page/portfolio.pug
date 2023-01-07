@@ -1,17 +1,17 @@
 extends ../layout/main
 
 block content
-  section.section-blog
+  section.section
     .container
       .container__inside
         h1.title-h1.section__title Our blog.
         p.text-main.section__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction, and market-penetrating strategies.
 
-        .blog
+        .section__posts
           each card in [1, 2, 3, 4]
-            .case
-              img(src=`/img/portfolio/item-${card}.jpg`, alt="").case__img
-              h4.title-h3.case__title Project title
-              p.text-main.case__text From pre-seed to series, we accelerate the companies we believe in by generating.
+            .card
+              img(src=`/img/portfolio/item-${card}.jpg`, alt="").card__img.card__img--large
+              h4.title-h3.card__title Project title
+              p.text-main.card__text From pre-seed to series, we accelerate the companies we believe in by generating.
         
         a(href="#").btn-main.section__more Load more
