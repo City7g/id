@@ -71,10 +71,14 @@ const image = () => {
 }
 
 const font = () => {
-  return gulp.src('./src/font/**/*').pipe(gulp.dest('./dist/font/'))
+  return gulp.src('./src/font/**/*').pipe(gulp.dest('./dist/font'))
 }
 
-export { html, style, script, image, font, browserSync }
+const support = () => {
+  return gulp.src('./src/support/**/*').pipe(gulp.dest('./dist'))
+}
+
+export { html, style, script, image, font, support, browserSync }
 
 export default () => {
   html()
@@ -82,6 +86,7 @@ export default () => {
   script()
   image()
   font()
+  support()
   browserSync()
   gulp.watch(['./src/pug/layout/*.pug', './src/pug/components/*.pug'], html)
   gulp.watch(['./src/pug/page/*.pug'], page)
@@ -89,4 +94,5 @@ export default () => {
   gulp.watch('./src/js/**/*.js', script)
   gulp.watch('./src/img/**/*', image)
   gulp.watch('./src/font/**/*', font)
+  gulp.watch('./src/support/**/*', support)
 }

@@ -1,7 +1,7 @@
 extends ../layout/main
 
 block content
-  section.section-blog
+  section.section.section-blog
     .container
       .container__inside
         h1.title-h1.section__title Our blog.
@@ -12,13 +12,13 @@ block content
           button
             img(src="/img/icon/search.svg", alt="")
 
-        .blog
+        .section__posts
           each card in [1, 2, 3, 4]
             .card
               img(src=`/img/blog/item-${card}.jpg`, alt="").card__img
               h4.title-h3.card__title Blog title number one how we use small grid in our site
               p.text-main.card__text From pre-seed to series, we accelerate the companies we believe in by generating serious brand equity, product traction by generating serious brand.
-              a(href="#").link-main.card__link Read more
+              a(href="#").link-main.card__more Read more
         
         a(href="#").btn-main.section__more Load more
   
