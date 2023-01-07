@@ -14,7 +14,15 @@ const browserSync = () => {
       baseDir: './dist/',
     },
     notify: false
-  })
+  },
+    function (err, bs) {
+      bs.addMiddleware("*", function (req, res) {
+        res.writeHead(302, {
+          location: "404.html"
+        });
+        res.end("Redirecting!");
+      });
+    })
 
   gulp.watch('./dist', browserSync.reload)
 }

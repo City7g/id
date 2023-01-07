@@ -15,8 +15,6 @@
   }
 
   &__posts {
-    margin-top: 80px;
-
     & > * {
       margin-top: 80px;
     }
@@ -25,6 +23,13 @@
   &__more {
     display: inline-block;
     margin-top: 80px;
+  }
+
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
   }
 
   &__sitemap {

@@ -88,7 +88,7 @@
   }
 
   body.--menu & span,
-  body.--post & span {
+  body.--popup & span {
     &:nth-child(1) {
       top: 50%;
       transform: translate(-50%, -50%) rotate(-45deg);
@@ -114,7 +114,6 @@
   bottom: 0;
   z-index: 1000;
   background-color: $white;
-  border-left: 1px solid #656a77;
   transition: 0.3s transform ease;
   transform: translateX(100%);
 

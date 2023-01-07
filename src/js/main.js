@@ -27,23 +27,27 @@ const body = document.body
 
 hambuger.addEventListener('click', e => {
   e.preventDefault()
-  if(body.classList.contains('--menu') || body.classList.contains('--post')) {
+  if(body.classList.contains('--menu') || body.classList.contains('--popup')) {
     body.classList.remove('--menu')
-    body.classList.remove('--post')
+    body.classList.remove('--popup')
   } else {
     body.classList.add('--menu')
   }
 })
 
 // Open single
-const blogLink = document.querySelectorAll('.card__link')
+const blogLink = document.querySelectorAll('.card__more')
 
 blogLink.forEach(item => {
   item.addEventListener('click', e => {
     e.preventDefault()
 
     document.body.classList.remove('--menu')
-    document.body.classList.toggle('--post')
+    document.body.classList.toggle('--popup')
   })
 })
 
+window.addEventListener('scroll', e => {
+  // console.log(window.pageYOffset)
+  document.querySelector('.popup').scrollTo({top: window.pageYOffset})
+})
