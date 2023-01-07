@@ -4,7 +4,7 @@ import development from "./module/development.js"
 development()
 
 // Sliders
-const swiper = new Swiper('.swiper', {
+new Swiper('.swiper', {
   spaceBetween: 50,
   initialSlide: 2,
   loop: true,
@@ -35,19 +35,36 @@ hambuger.addEventListener('click', e => {
   }
 })
 
-// Open single
-const blogLink = document.querySelectorAll('.card__more')
+// Open post
+const postLink = document.querySelectorAll('.card__more')
+const popup = document.querySelector('.popup')
 
-blogLink.forEach(item => {
+postLink.forEach(item => {
   item.addEventListener('click', e => {
     e.preventDefault()
 
     document.body.classList.remove('--menu')
-    document.body.classList.toggle('--popup')
+
+    if(document.body.classList.contains('--popup')) {
+      popup.classList.add('close')
+      setTimeout(() => {
+        popup.classList.remove('close')
+      }, 300);
+    } else {
+      document.body.classList.add('--popup')
+    }
   })
 })
 
-window.addEventListener('scroll', e => {
-  // console.log(window.pageYOffset)
-  document.querySelector('.popup').scrollTo({top: window.pageYOffset})
+// Close Popup
+window.addEventListener('keyup', e => {
+  if(e.key === "Escape") {
+    document.body.classList.remove('--menu')
+    document.body.classList.remove('--popup')
+  }
 })
+
+// window.addEventListener('scroll', e => {
+//   // console.log(window.pageYOffset)
+//   document.querySelector('.popup').scrollTo({top: window.pageYOffset})
+// })

@@ -39,8 +39,12 @@
     transition-delay: 0.05s;
   }
 
+  &.close {
+    transform: translateX(100%) !important;
+  }
+
   &__wrap {
-    padding: 30px var(--container-column-width) 1200px;
+    padding: 30px var(--container-column-width) 120px;
     width: calc(var(--container-column-width) * 11);
 
     // @media (max-width: 1899px) {

@@ -27,13 +27,15 @@ select {
   font-family: inherit;
 }
 
-:where(input) {
+input {
   font-family: inherit;
   border: none;
 }
 
 textarea {
   font-family: inherit;
+  border: none;
+  resize: none;
 }
 
 img {

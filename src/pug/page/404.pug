@@ -1,1 +1,9 @@
-a(href="/") Back
+extends ../layout/empty
+
+block content
+  .section.section--error
+    .container
+      .container__inside
+        h1.title-h1.section__title 404.
+        p.text-main Page not found or such pages do not exist.
+        a(href="/").link-main.section__home Go home

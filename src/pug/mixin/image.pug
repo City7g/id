@@ -1,0 +1,4 @@
+mixin img(path='asd', className='asd')
+  picture(class=className)
+    source(srcset=`${path}.avif`, type="image/avif")
+    img(src=`${path}.jpg`, alt="")

@@ -24,25 +24,25 @@ a {
 }
 
 :root {
-  --container-width: 1640px;
-  --container-columns: 24;
+  --container-width: 100%;
+  --container-columns: 4;
   --container-column-width: calc(var(--container-width) / var(--container-columns));
 
-  @media (max-width: 1899px) {
-    --container-width: 1200px;
+  @media (min-width: 568px) {
+    --container-width: 500px;
   }
 
-  @media (max-width: 1199px) {
+  @media (min-width: 768px) {
     --container-width: 700px;
     --container-columns: 14;
   }
 
-  @media (max-width: 767px) {
-    --container-width: 100%;
-    --container-columns: 12;
+  @media (min-width: 1280px) {
+    --container-width: 1200px;
+    --container-columns: 24;
   }
 
-  @media (max-width: 567px) {
-    --container-columns: 4;
+  @media (min-width: 1900px) {
+    --container-width: 1640px;
   }
 }
