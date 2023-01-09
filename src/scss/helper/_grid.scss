@@ -28,7 +28,7 @@ body {
 
   background-repeat: no-repeat;
 
-  @media (min-width: 760px) {
+  @media (min-width: 568px) {
     border-width: 0 calc((var(--screen-width) - var(--container-width)) / 2);
   }
 }

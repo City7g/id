@@ -1,7 +1,7 @@
 import Swiper from 'swiper'
 import development from "./module/development.js"
 
-development()
+// development()
 
 // Sliders
 new Swiper('.swiper', {

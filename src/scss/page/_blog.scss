@@ -21,17 +21,20 @@
   right: 0;
   width: 100%;
   z-index: 1001;
-  height: 100vh;
+  height: calc(100vh - 60px);
+  margin-top: 60px;
   transform: translateX(100%);
   transition: 0.3s transform ease;
   transition-delay: 0s;
-  border-left: 1px solid #656A77;
   background-color: $white;
   overscroll-behavior: none;
   overflow: auto;
 
   @media (min-width: 1200px) {
     width: calc(var(--container-column-width) * 10 + (100vw - var(--container-width)) / 2);
+    height: 100vh;
+    margin-top: 0;
+    border-left: 1px solid #656A77;
   }
 
   body.--popup & {
@@ -44,8 +47,24 @@
   }
 
   &__wrap {
-    padding: 30px var(--container-column-width) 120px;
-    width: calc(var(--container-column-width) * 11);
+    padding: 100px 0 120px;
+
+    @media (min-width: 760px) {
+      width: calc(var(--container-column-width) * 10);
+    }
+
+    @media (min-width: 1200px) {
+      padding: 60px var(--container-column-width) 120px;
+      width: calc(var(--container-column-width) * 11);
+    }
+
+    @media (max-width: 1199px) {
+      margin: 0 calc((100vw - var(--container-width)) / 2) 0 calc((100vw - var(--container-width)) / 2 + var(--container-column-width) * 3);
+    }
+
+    @media (max-width: 759px) {
+      margin: 0 calc((100vw - var(--container-width)) / 2) 0 calc((100vw - var(--container-width)) / 2);
+    }
 
     // @media (max-width: 1899px) {
     //   padding: 40px 100px 40px 50px;

@@ -3,8 +3,12 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1002;
   background-color: $white;
+
+  @media (min-width: 760px) {
+    z-index: 1000;
+  }
 }
 
 .header-logo {

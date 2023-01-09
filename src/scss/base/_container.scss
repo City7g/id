@@ -5,7 +5,7 @@
 }
 
 .container__inside {
-  @media (min-width: 768px) {
+  @media (min-width: 760px) {
     width: calc(var(--container-column-width) * 10);
     margin-left: calc(var(--container-column-width) * 3);
   }
