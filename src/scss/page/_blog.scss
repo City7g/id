@@ -31,10 +31,14 @@
   overflow: auto;
 
   @media (min-width: 1200px) {
-    width: calc(var(--container-column-width) * 10 + (100vw - var(--container-width)) / 2);
     height: 100vh;
     margin-top: 0;
     border-left: 1px solid #656A77;
+    width: calc(var(--container-column-width) * 10 + (100% - var(--container-width)) / 2);
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 
   body.--popup & {

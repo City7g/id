@@ -5,15 +5,15 @@ body {
   font-size: 16px;
   line-height: 1.6;
 
-  &.--menu {
-    overflow: hidden;
-  }
+  // &.--menu {
+  //   overflow: hidden;
+  // }
 
-  @media (max-width: 759px) {
-    &.--popup {
-      overflow: hidden;
-    }
-  }
+  // @media (max-width: 759px) {
+  //   &.--popup {
+  //     overflow: hidden;
+  //   }
+  // }
 }
 
 a {
